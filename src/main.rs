@@ -14,8 +14,8 @@ macro_rules! cstr {
 
 #[no_mangle]
 pub extern "C" fn _start() -> i32 {
-    let message = cstr!("Holy shit this is 3kb");
-    let caption = cstr!("Holy Shit!");
+    let message = cstr!("Holy moly this is 3kb");
+    let caption = cstr!("Wowzers!");
 
     unsafe {
         MessageBoxA(HWND::default(), PCSTR::from(message.as_ptr()), PCSTR::from(caption.as_ptr()), 0);
